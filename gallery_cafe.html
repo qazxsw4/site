@@ -1,0 +1,209 @@
+﻿
+<meta content="width=device-width, initial-scale=0.6" name="viewport">
+
+
+<style>
+    #galleryCafe {
+        width: 70%;
+        overflow: hidden;
+        margin: auto;
+        position: relative;
+        background:#999;
+    }
+    .imgCafe {
+        width: 100%;
+        position: absolute;
+        transition: 1s;
+        opacity: 0;
+    }
+    .activ {
+        display: block;
+        position: relative;
+        opacity: 1;
+        margin-left:0px;
+
+    }
+    #blockButtonSlider {
+        width: 70%;
+        margin: auto;
+        text-align: center;
+        padding: 0 0 10px 0;
+        margin-top: -20px;
+        background:#999;
+    }
+    .buttonSlider {
+        width: 150px;
+        height: 10px;
+        border-radius: 5px;
+        background: blue;
+        display: inline-block;
+        position: relative;
+        color: blue;
+        z-index: 0;
+        font-size: 5px;
+        cursor: pointer;
+    }
+    .buttonSlider1 {
+        width: 0px;
+        height: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        display: inline-block;
+        background: yellow;
+        position: absolute;
+        z-index: 1;
+        cursor: pointer;
+    }
+    .www{
+
+    }
+</style>
+<section id="section1">
+    <div id="gallery_cafe">
+        <div id="prev">&laquo;</div>
+        <div id="galleryCafe">
+            <img src="img_gallery_cafe/001.png" class="activ imgCafe" />
+            <img src="img_gallery_cafe/002.png" class="imgCafe" />
+            <img src="img_gallery_cafe/003.png" class="imgCafe" />
+            <img src="img_gallery_cafe/004.png" class="imgCafe" />
+            <img src="img_gallery_cafe/005.png" class="imgCafe" />
+         
+        </div>
+        <div id="next">&raquo;</div>
+    </div>
+    <div id="blockButtonSlider">
+        <div class="www buttonSlider1"></div>
+        <div class="buttonSlider">0</div>
+
+        <div class="www buttonSlider1"></div>
+        <div class="buttonSlider">1</div>
+
+        <div class="www buttonSlider1"></div>
+        <div class="buttonSlider">2</div>
+
+   <div class="www buttonSlider1"></div>
+        <div class="buttonSlider">3</div>
+
+   <div class="www buttonSlider1"></div>
+        <div class="buttonSlider">4</div>
+    </div>
+</section>
+
+<script>
+    let imgCafe = document.querySelectorAll('.imgCafe')
+    let activ = document.querySelector('.activ')
+    let buttonSlider = document.querySelectorAll('.buttonSlider')
+    let buttonSlider1 = document.querySelectorAll('.buttonSlider1')
+    let www = document.querySelectorAll('.www')
+
+  
+
+
+    setTimeout(bbb, 0)
+    function bbb() {
+        buttonSlider1[0].style.transition = 10+'s'
+        buttonSlider1[0].style.width = '150px'
+    }
+
+
+    s = 0
+    let fff = setInterval(aaa, 10000)
+    for (let i = 0; i < buttonSlider.length; i++) {
+        buttonSlider[i].onclick = function () {
+    //  clearInterval(fff)
+            s = buttonSlider[i].innerHTML
+            for (let i = 0; i < imgCafe.length; i++) {
+                imgCafe[i].style.opacity = 0
+                imgCafe[i].style.position = 'absolute'
+                buttonSlider1[i].style.transition = 0 + 's';
+                buttonSlider1[i].style.width = '0px'
+            }
+
+            imgCafe[s].style.opacity = 1
+            imgCafe[s].style.position = 'relative'
+            buttonSlider1[s].style.transition = 10 + 's';
+            buttonSlider1[s].style.width = '150px'
+            
+
+        }
+    }
+
+
+   
+    function aaa() {
+       
+        s++;
+        if (s == imgCafe.length) {
+            s = 0
+        }
+        if (s == imgCafe.length) {
+            imgCafe[0].style.opacity = 1
+        }
+        for (let i = 0; i < imgCafe.length; i++) {
+            imgCafe[i].style.opacity = 0
+            imgCafe[i].style.position = 'absolute'
+            buttonSlider1[i].style.transition = 0 + 's';
+            buttonSlider1[i].style.width = '0px'
+        }
+
+        imgCafe[s].style.opacity = 1
+        imgCafe[s].style.position = 'relative'
+        buttonSlider1[s].style.transition= 10+'s';
+        buttonSlider1[s].style.width = '150px'
+    }
+
+
+ 
+
+
+
+
+    let gallerycafe = [
+        ['img_gallery_cafe/001.png'],
+        ['img_gallery_cafe/002.png'],
+        ['img_gallery_cafe/003.png'],
+        ['img_gallery_cafe/004.png'],
+        ['img_gallery_cafe/005.png'],
+        ['img_gallery_cafe/006.png'],
+        ['img_gallery_cafe/007.png'],
+        ['img_gallery_cafe/008.png'],
+        ['img_gallery_cafe/009.png'],
+        ['img_gallery_cafe/010.png'],
+        ['img_gallery_cafe/011.png'],
+        ['img_gallery_cafe/012.png'],
+        ['img_gallery_cafe/013.png'],
+        ['img_gallery_cafe/014.png'],
+        ['img_gallery_cafe/015.png']
+    ]
+
+</script>
+
+
+<div id="text_cafe">
+    <h1>О компании кафе, продуктов питания</h1>
+    <p class='text_cafe'>
+        Наша компания, обладая многолетним опытом и глубокими корнями в индустрии питания, гордится
+        предложением высококачественных продуктов, которые удовлетворяют самые изысканные вкусы
+        современных потребителей. Мы стремимся к постоянному совершенствованию, внедряя инновационные
+        технологии и следуя последним тенденциям в области здорового питания.
+    </p>
+    <p class='text_cafe'>
+        Наше портфолио включает органические и натуральные продукты, тщательно отобранные от лучших
+        производителей. Мы ценим качество на каждом этапе — от выбора сырья до упаковки готовой
+        продукции. Наша команда экспертов разрабатывает и внедряет уникальные рецептуры, сочетая
+        традиции с современными подходами.
+    </p>
+    <p class='text_cafe'>
+        Мы понимаем важность устойчивого развития и бережного отношения к природе. В этой связи мы
+        активно развиваем цепочки поставок, ориентированные на экологически чистые методы производства,
+        минимизируя негативное воздействие на окружающую среду.
+    </p>
+    <p class='text_cafe'>
+        Сотрудничая с нами, наши партнеры могут быть уверены в надежности и ответственности. Мы
+        вдохновляемся созданием не просто еды, а настоящего гастрономического искусства, которое дарит
+        радость и удовлетворение каждому потребителю.
+    </p>
+</div>
+
+
+

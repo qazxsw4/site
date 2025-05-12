@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <style>
+        #block_product {
+            text-align:center;
+        } 
+        #block_product .img_product {
+            width:60%;
+        }
+        #gallery__product {
+            display: none;
+            position: absolute;
+            z-index:2;
+            background: black;
+            width: 100%;
+        }
+        #close_galley {
+           
+            position: absolute;
+            z-index: 2;
+            width: 25px;
+            top:20px;
+            right:20px;
+           
+        }
+        #img_close_galley {
+            width: 100%;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        #next1 {
+            font-size: 60px;
+            position: absolute;
+            top: 45%;
+            right: 20px;
+            background: #96969673;
+            color: #fff;
+            padding: 0px 10px 19px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        #prev1 {
+            font-size: 60px;
+            position: absolute;
+            left: 20px;
+            top: 45%;
+            background: #96969673;
+            color: #fff;
+            padding: 0px 10px 19px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        #block_product .big_image {
+            display: none;
+        }
+        .block_img_product {
+            display: none;
+            text-align:center;
+        }
+
+        .block__img__product {
+            width: 33%;
+            display: inline-block;
+            cursor:pointer;
+            position:relative;
+
+        }
+        .big_image {
+            align-items: center; /* выравнивает по вертикали по центру, надо указать "display:grid;" */
+            display: grid;
+            position: absolute;
+            top: 40%;
+            left: 35%;
+            right: 35%;
+            bottom: 40%;
+            background: #008cba9c;
+            color:#fff;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            transition: .5s;
+        }
+        .block__img__product:hover .big_image {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        .img_product {
+            width: 100%;
+        }
+       
+        #gallery___product {
+            width: 90%;
+            border-radius: 5px;
+            margin: auto;
+            padding: 10px;
+            background: #e7e7e7;
+            position: relative;
+            align-items: center; /* выравнивает по вертикали по центру, надо указать "display:grid;" */
+            display: grid;
+        }
+        #next2 {
+            font-size: 60px;
+            position: absolute;
+             z-index:1;
+            right: 20px;
+            background: #96969673;
+            color: #fff;
+            padding: 0px 10px 19px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #prev2 {
+            font-size: 60px;
+            position: absolute;
+            z-index:1;
+            left: 20px;
+         
+            background: #96969673;
+            color: #fff;
+            padding: 0px 10px 19px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+   
+
+
+    <div id="gallery_product">
+
+        <div id="gallery__product">
+            <div id="close_galley"><img id="img_close_galley" src="logo/cross4.png" /></div>
+            <div id="prev1">&laquo;</div>
+            <div id="next1">&raquo;</div>
+            <div id="block_product"></div>
+        </div>
+
+        <div id="gallery___product">
+            <div id="next2">&raquo;</div>
+            <div id="prev2">&laquo;</div>
+            <div class="block_img_product">
+                <div class="block__img__product"><img class="img_product" src="img_product/01.png"><div class="big_image">Увиличеть</div></div>
+                <div class="block__img__product"><img class="img_product" src="img_product/02.png"><div class="big_image">Увиличеть</div></div>
+                <div class="block__img__product"><img class="img_product" src="img_product/03.png"><div class="big_image">Увиличеть</div></div>
+                <div class="block__img__product"><img class="img_product" src="img_product/04.png"><div class="big_image">Увиличеть</div></div>
+                <div class="block__img__product"><img class="img_product" src="img_product/05.png"><div class="big_image">Увиличеть</div></div>
+                <div class="block__img__product"><img class="img_product" src="img_product/06.png"><div class="big_image">Увиличеть</div></div>
+
+            </div>
+            <div class="block_img_product">
+
+                <div class="block__img__product"><img class="img_product" src="img_product/07.png"><div class="big_image">Увиличеть</div></div>
+                <div class="block__img__product"><img class="img_product" src="img_product/08.png"><div class="big_image">Увиличеть</div></div>
+                <div class="block__img__product"><img class="img_product" src="img_product/09.png"><div class="big_image">Увиличеть</div></div>
+                <div class="block__img__product"><img class="img_product" src="img_product/10.png"><div class="big_image">Увиличеть</div></div>
+                <div class="block__img__product"><img class="img_product" src="img_product/11.png"><div class="big_image">Увиличеть</div></div>
+                <div class="block__img__product"><img class="img_product" src="img_product/12.png"><div class="big_image">Увиличеть</div></div>
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+    <script>
+        let blockImgProduct = document.querySelectorAll(".block_img_product")
+        let blockimgproduct = document.querySelectorAll(".block__img__product")
+        let bigImage = document.querySelectorAll(".big_image")
+
+  
+        img_close_galley.onclick = function () {
+            gallery__product.style.display = 'none'
+        }
+        // Открыл первые шесть изображений начало 
+        for (let i = 0; i <= 0; i++) {
+            blockImgProduct[i].style.display = "block"
+
+        }
+        // Открыл первые шесть изображений конец
+
+      
+        a = 0
+        // Листает первую гвлерею в право начало
+        next2.onclick = function () {
+            for (let i = 0; i <= 1; i++) {
+                blockImgProduct[i].style.display = "none"
+            }
+
+            a += 1
+            if (a == 2) {
+                a = 0
+            }
+            for (let i = 0 + a; i <= 0 + a; i++) {
+                blockImgProduct[i].style.display = "block"
+            }
+        }
+        // Листает первую гвлерею в право конец
+        // Листает первую гвлерею в лево начало
+        prev2.onclick = function () {
+            for (let i = 0; i <= 1; i++) {
+                blockImgProduct[i].style.display = "none"
+            }
+
+            a -= 1
+            if (a == -1) {
+                a = 1
+            }
+            for (let i = 0 + a; i <= 0 + a; i++) {
+                blockImgProduct[i].style.display = "block"
+            }
+        }
+        // Листает первую гвлерею в леввоо конец
+        // Открывает вторую болшую галерею начало
+        for (let i = 0; i <= blockimgproduct.length; i++) {
+
+            bigImage[i].onclick = function () {
+                gallery__product.style.display = 'block'
+                block_product.innerHTML = blockimgproduct[i].innerHTML 
+                // Листает вторую гвлерею в право начало
+                next1.onclick = function () {
+                    i += 1
+                    if (i == 12) {
+                        i=0
+                    }
+
+                    block_product.innerHTML = blockimgproduct[i].innerHTML
+                }
+                // Листает вторую гвлерею в право конец
+                // Листает вторую гвлерею в лево начало
+                prev1.onclick = function () {
+                    i -= 1
+                    if (i ==-1) {
+                        i = 11
+                    }
+                    block_product.innerHTML = blockimgproduct[i].innerHTML
+                }
+                // Листает вторую гвлерею в право конец
+            }
+          
+        }
+        // Открывает вторую болшую галерею конец
+
+
+
+
+
+     
+    </script>
+
+
+
+
+</body>
+</html>
