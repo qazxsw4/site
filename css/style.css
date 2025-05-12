@@ -1,0 +1,195 @@
+body{
+    margin: 0;
+}
+#contentbasket{
+    position:relative;
+    height:100px;
+}
+#basket {
+    border: 1px solid red;
+}
+#numberProducts{
+    position: absolute;
+    right: 50px;
+    top:20px;
+    font-size: 25px;
+    background: yellow;
+    z-index: 1;
+    text-align: center;
+    padding: 0 9px 0 9px;
+    border-radius: 50px;
+}
+#cartLogo{
+    width: 50px;
+    position: absolute;
+    right: 70px;
+    top:30px;
+}
+#blockBrends{
+    width: 85%;
+    border: 1px solid red;
+    margin: auto;
+    text-align: center;
+}
+ .brandBlock{
+    display: inline-block;
+    width: 24.44%;
+    border: 1px solid red;
+    vertical-align: top;
+    margin: 1.9px 0;
+}
+.productName {
+    padding: 0 5px 0 0;
+    width: 45%;
+    float: right;
+    font-size: 13px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+} 
+.product .productName{
+      
+    width: 60%;
+    position: absolute;
+    padding: 1px 5px;
+    top: 0;
+    right: 0;
+    margin: auto;
+     font-size: 14px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+}
+.blockPrice {
+    width: 40%;
+    margin-left: 10px;
+    float:left;
+}
+.price {
+    font-size: 20px;
+    display: inline;
+    font-family: fantasy;
+}
+.priceLogo{
+    font-size: 20px;
+    margin-left: 5px;
+}
+.button {
+    background: yellow;
+    width: 40%;
+    padding: 3px 0 6.5px 0;
+    margin: 0 10px 10px 0;
+    float: right;
+    cursor: pointer;
+    border-radius: 3px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-weight: 900;
+}
+.button:hover{
+    background: blue;
+}
+.product  .priceLogo{
+    font-size: 17px;
+    position: absolute;
+    right: 13px;
+    bottom: 17px; 
+}
+.product  .price{
+    font-size: 20px;
+    position: absolute;
+    right: 25px;
+    bottom: 17px; 
+}
+.imgBrand{
+    width: 40%;
+   
+}
+.product  .imgBrand{
+    width: 30%;
+    display: inline;
+}
+
+#basket{
+    border: 1px solid red;
+    width: 20%;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    background: antiquewhite;
+    padding: 5px;
+    display: none;
+    
+}
+
+.plus, .minus, .deliteProduct {
+   cursor: pointer;
+    margin: 3px;
+}
+
+.plus {
+     position: absolute;
+    right: 54.6px;
+    bottom: 2px;
+  
+}
+.quantity{
+     position: absolute;
+    right: 93px;
+    bottom: 8px;
+    font-size: 20px;
+    
+}
+.minus{
+ position: absolute;
+    right: 30px;
+    bottom: 2px;
+}
+.deliteProduct {
+position: absolute;
+    right: 10px;
+    bottom:2px;
+}
+
+
+.product{
+    position: relative; 
+}
+
+.minus,.plus, .basket {
+    width: 15px;
+}
+
+.blockProduct{
+    border: 0.5px solid red;
+    background: #fff;
+    position: relative;
+    display: none;
+    padding: 5px;
+    height: 110px;
+    margin: 1px 0 0 0;
+}
+#footer{
+    
+    height: 200px;
+    border: 1px solid red;
+}
+#paginationBlock{
+    text-align: center;
+    margin: 60px 0;
+    cursor: pointer;
+   
+   
+}
+.pagination{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 29px;
+  
+    display: inline-block;
+   background: yellow;
+    margin: 0 1px;
+    border-radius: 4px;
+    font-family: fantasy;
+     font-size: 21px;
+}
+.pagination:hover{
+   background: blue;
+  font-size: 25px;
+}
