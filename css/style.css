@@ -1,195 +1,160 @@
-body{
-    margin: 0;
+body
+{
+    margin:0;
 }
-#contentbasket{
-    position:relative;
-    height:100px;
-}
-#basket {
-    border: 1px solid red;
-}
-#numberProducts{
-    position: absolute;
-    right: 50px;
-    top:20px;
-    font-size: 25px;
-    background: yellow;
-    z-index: 1;
-    text-align: center;
-    padding: 0 9px 0 9px;
-    border-radius: 50px;
-}
-#cartLogo{
-    width: 50px;
-    position: absolute;
-    right: 70px;
-    top:30px;
-}
-#blockBrends{
-    width: 85%;
-    border: 1px solid red;
-    margin: auto;
-    text-align: center;
-}
- .brandBlock{
-    display: inline-block;
-    width: 24.44%;
-    border: 1px solid red;
-    vertical-align: top;
-    margin: 1.9px 0;
-}
-.productName {
-    padding: 0 5px 0 0;
-    width: 45%;
-    float: right;
-    font-size: 13px;
-    font-family: Brush Script MT, Brush Script Std, cursive;
-} 
-.product .productName{
-      
-    width: 60%;
-    position: absolute;
-    padding: 1px 5px;
-    top: 0;
-    right: 0;
-    margin: auto;
-     font-size: 14px;
-    font-family: Brush Script MT, Brush Script Std, cursive;
-}
-.blockPrice {
-    width: 40%;
-    margin-left: 10px;
-    float:left;
-}
-.price {
-    font-size: 20px;
-    display: inline;
-    font-family: fantasy;
-}
-.priceLogo{
-    font-size: 20px;
-    margin-left: 5px;
-}
-.button {
-    background: yellow;
-    width: 40%;
-    padding: 3px 0 6.5px 0;
-    margin: 0 10px 10px 0;
-    float: right;
-    cursor: pointer;
-    border-radius: 3px;
-    font-family: Brush Script MT, Brush Script Std, cursive;
-    font-weight: 900;
-}
-.button:hover{
-    background: blue;
-}
-.product  .priceLogo{
-    font-size: 17px;
-    position: absolute;
-    right: 13px;
-    bottom: 17px; 
-}
-.product  .price{
-    font-size: 20px;
-    position: absolute;
-    right: 25px;
-    bottom: 17px; 
-}
-.imgBrand{
-    width: 40%;
-   
-}
-.product  .imgBrand{
-    width: 30%;
-    display: inline;
-}
-
-#basket{
-    border: 1px solid red;
-    width: 20%;
-    position: absolute;
-    top: 100px;
-    right: 0;
-    background: antiquewhite;
-    padding: 5px;
-    display: none;
-    
-}
-
-.plus, .minus, .deliteProduct {
-   cursor: pointer;
-    margin: 3px;
-}
-
-.plus {
-     position: absolute;
-    right: 54.6px;
-    bottom: 2px;
-  
-}
-.quantity{
-     position: absolute;
-    right: 93px;
-    bottom: 8px;
-    font-size: 20px;
-    
-}
-.minus{
- position: absolute;
-    right: 30px;
-    bottom: 2px;
-}
-.deliteProduct {
-position: absolute;
-    right: 10px;
-    bottom:2px;
-}
-
-
-.product{
-    position: relative; 
-}
-
-.minus,.plus, .basket {
-    width: 15px;
-}
-
-.blockProduct{
-    border: 0.5px solid red;
-    background: #fff;
-    position: relative;
-    display: none;
-    padding: 5px;
-    height: 110px;
-    margin: 1px 0 0 0;
-}
-#footer{
-    
+#block_top {
+    width: 100%;
     height: 200px;
     border: 1px solid red;
 }
-#paginationBlock{
-    text-align: center;
-    margin: 60px 0;
-    cursor: pointer;
-   
-   
+
+#site_name {
+    border: 1px solid red;
+    font-size: 40px;
+    display: inline-grid;
+    margin: 40px 0 0 40px;
+    padding: 10px;
 }
-.pagination{
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    line-height: 29px;
-  
+
+#contacts {
+    border: 1px solid red;
+    float: right;
+    margin: 30px 30px 0 0;
+    padding:10px;
+}
+
+#links {
+    border: 1px solid red;
+    float: right;
+    margin: 20px 80px 0 0;
+    padding: 10px;
+    font-size: 20px;
+    clear: both;
+}
+
+#section1{
+    margin:50px 0 0 0;
+}
+#gallery {
+    width: 90%;
+    margin: auto;
+    border: 1px solid red;
+ 
+}
+#imgGallery {
+    border: 1px solid green;
+    width: 100%;
+}
+.aaa {
+    opacity: 1;
+    animation: galery 4000ms infinite;
+}
+@keyframes galery{
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100%{
+        opacity:1;
+    }
+}
+#section2 {
+    margin: 90px 0 40px 0;
+    border: 1px solid red;
+}
+#short_description {
+    width: 80%;
+    margin: auto;
+    border: 1px solid red;
+    padding: 20px;
+}
+.detailed_description {
+    width: 31%;
     display: inline-block;
-   background: yellow;
-    margin: 0 1px;
-    border-radius: 4px;
-    font-family: fantasy;
-     font-size: 21px;
+    margin: 0 10px 0 10px;
+    vertical-align: top;
 }
-.pagination:hover{
-   background: blue;
-  font-size: 25px;
+
+.img_detailed_description {
+    width: 50%;
+    float: left;
+    margin: 9px 9px 0 9px;
+}
+#section4 {
+    margin-top:100px;
+    width: 75%;
+    border: 1px solid red;
+    margin: auto;
+    padding:50px 30px;
+}
+h1 {
+    text-align: center;
+}
+#aboutUs {
+    text-align:center;
+}
+#use_the_services {
+    text-align:center;
+    margin-top:100px;
+    padding: 15px;
+    border: 1px solid red;
+}
+#use__the__services {
+    width: 70%;
+    margin:auto;
+    padding: 15px;
+    border: 1px solid red;
+}
+#form-contacts {
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    border: 1px solid red;
+    display: flow-root;
+}
+#form {
+    width: 45%;
+    display: inline-block;
+    border: 1px solid red;
+    text-align: center;
+    padding: 10px;
+}
+#form_contacts {
+    text-align: center;
+}
+fieldset {
+    background: aliceblue;
+    border-radius:4px;
+}
+legend{
+    font-size:25px;
+}
+input {
+    font-size: 20px;
+    width:80%;
+    height:30px;
+    border:0.1px solid #000;
+    padding:5px 10px;
+    border-radius:4px;
+}
+textarea {
+    font-size: 18px;
+    width: 80%;
+    border: 0.1px solid #000;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+#contact {
+    width: 45%;
+    float: right;
+    border: 1px solid red;
+    padding: 18px 10px;
+}
+#footer {
+  
+    height: 200px;
+    padding: 15px;
+    border: 1px solid red;
 }
